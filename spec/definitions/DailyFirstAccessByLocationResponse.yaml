@@ -1,7 +1,0 @@
-type: object
-properties:
-  individualDays:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/IndividualDays'

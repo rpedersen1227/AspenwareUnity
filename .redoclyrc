@@ -1,8 +1,0 @@
-specFileName: 'c://unityv4/unityv4.yaml.txt'
-apiTitle: UnityAPI
-splitSpec: true
-codeSamples: true
-swaggerUI: true
-travis: true
-repo: rpedersen1227/AspenwareUnity
-oasVersion: '2.0'

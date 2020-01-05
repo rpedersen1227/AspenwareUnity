@@ -1,0 +1,110 @@
+parameters:
+  - name: redemptionCode
+    in: path
+    description: The Coupon's redemption code
+    required: true
+    schema:
+      type: string
+get:
+  tags:
+    - Coupons
+  summary: Retrieve a coupon
+  operationId: GetCoupon
+  description: |
+    Retrieve a coupon with specified redemption code string
+  responses:
+    '200':
+      description: Coupon was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Coupon'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $coupon = $client->coupons()->load('redemptionCode');
+put:
+  tags:
+    - Coupons
+  summary: Create or update a coupon with predefined redemption code
+  operationId: PutCoupon
+  description: |
+    Create or update a coupon with predefined redemption code
+  requestBody:
+    $ref: '#/components/requestBodies/Coupon'
+  responses:
+    '200':
+      description: Coupon was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Coupon'
+    '201':
+      description: Coupon was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Coupon'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+    '409':
+      $ref: '#/components/responses/Conflict'
+    '422':
+      $ref: '#/components/responses/InvalidDataError'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $couponForm = new Rebilly\Entities\Coupons\Coupon();
+
+        $discountArray = [
+            'type' => Rebilly\Entities\Coupons\Discount::TYPE_FIXED,
+            'currency' => 'USD',
+            'amount' => 1.99,
+        ];
+
+        $discountForm = new Rebilly\Entities\Coupons\Discount($discountArray);
+        $couponForm->setDiscount($discountForm);
+
+        $restrictionArray = [
+            'type' => Rebilly\Entities\Coupons\Restriction::TYPE_DISCOUNTS_PER_REDEMPTION,
+            'quantity' => 2,
+        ];
+
+        $restrictionForm = new Rebilly\Entities\Coupons\Restriction([
+            $restrictionArray,
+        ]);
+
+        $couponForm->setRestrictions($restrictionForm);
+
+        try {
+            $coupon = $client->coupons()->create($couponForm, 'redemptionCode');
+        } catch (UnprocessableEntityException $e) {
+            echo $e->getMessage();
+        }

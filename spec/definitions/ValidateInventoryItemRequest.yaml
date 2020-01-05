@@ -1,9 +1,0 @@
-type: object
-properties:
-  contactId:
-    $ref: '#/definitions/Identifier'
-  inventoryItem:
-    $ref: '#/definitions/InventoryItem'
-  quantity:
-    format: int32
-    type: integer

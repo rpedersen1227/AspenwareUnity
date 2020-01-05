@@ -1,4 +1,0 @@
-type: object
-properties:
-  isOrderLineOpen:
-    type: boolean

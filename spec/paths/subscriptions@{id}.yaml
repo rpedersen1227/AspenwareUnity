@@ -1,0 +1,126 @@
+parameters:
+  - $ref: '#/components/parameters/resourceId'
+get:
+  tags:
+    - Subscriptions
+  summary: Retrieve a subscription
+  operationId: GetSubscription
+  parameters:
+    - $ref: '#/components/parameters/subscriptionExpand'
+  description: |
+    Retrieve a subscription with specified identifier string
+  responses:
+    '200':
+      description: Subscription was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Subscription'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $subscription = $client->subscriptions()->load('subscriptionId');
+put:
+  tags:
+    - Subscriptions
+  summary: Upsert a subscription with predefined ID
+  operationId: PutSubscription
+  description: |
+    Create or update a subscription with predefined identifier string
+  parameters:
+    - $ref: '#/components/parameters/subscriptionExpand'
+  requestBody:
+    $ref: '#/components/requestBodies/Subscription'
+  responses:
+    '200':
+      description: Subscription was updated
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Subscription'
+    '201':
+      description: Subscription was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Subscription'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+    '422':
+      $ref: '#/components/responses/InvalidDataError'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $subscriptionForm = new Rebilly\Entities\Subscription();
+        $subscriptionForm->setCustomerId('customerId');
+        $subscriptionForm->setWebsiteId('websiteId');
+        $subscriptionForm->setItems($subscriptionForm->createItems([
+            'planId' => 'my-plan',
+            'quantity' => 1,
+        ]));
+        $subscriptionForm->setBillingAddress([
+            'firstName' => 'John',
+            'lastName' => 'Doe',
+            'organization' => 'Test LTD',
+            'address' => 'Test street 5',
+            'address2' => 'Test house 5',
+            'city' => 'New York',
+            'region' => 'Long Island',
+            'country' => 'US',
+            'postalCode' => '123456',
+            'emails' => [
+                [
+                    'label' => 'main',
+                    'value' => 'johndoe@testemail.com',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'secondary',
+                    'value' => 'otheremail@testemail.com',
+                ],
+            ],
+            'phoneNumbers' => [
+                [
+                    'label' => 'work',
+                    'value' => '+123456789',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'home',
+                    'value' => '+9874654321',
+                ],
+            ],
+        ]);
+
+        try {
+            $subscription = $client->subscriptions()->update('subscriptionId', $subscriptionForm);
+        } catch (UnprocessableEntityException $e) {
+            echo $e->getMessage();
+        }

@@ -1,7 +1,0 @@
-type: object
-properties:
-  details:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/LoyaltyPointsDetail'

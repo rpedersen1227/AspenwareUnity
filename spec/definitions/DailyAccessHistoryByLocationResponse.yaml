@@ -1,7 +1,0 @@
-type: object
-properties:
-  dailyUses:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/DailyUses'

@@ -1,0 +1,170 @@
+get:
+  tags:
+    - Customers
+  summary: Retrieve a list of customers
+  operationId: GetCustomerCollection
+  description: |
+    Retrieve a list of customers
+  parameters:
+    - $ref: '#/components/parameters/collectionLimit'
+    - $ref: '#/components/parameters/collectionOffset'
+    - $ref: '#/components/parameters/collectionFilter'
+    - $ref: '#/components/parameters/collectionQuery'
+    - $ref: '#/components/parameters/collectionExpand'
+    - $ref: '#/components/parameters/collectionFields'
+    - name: sort
+      in: query
+      description: >-
+        The collection items sort field and order (prefix with "-" for
+        descending sort).
+      style: form
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - id
+            - '-id'
+            - email
+            - '-email'
+            - averageValue
+            - '-averageValue'
+            - paymentCount
+            - '-paymentCount'
+            - lastPaymentTime
+            - '-lastPaymentTime'
+            - lifetimeRevenue
+            - '-lifetimeRevenue'
+            - invoiceCount
+            - '-invoiceCount'
+            - createdTime
+            - '-createdTime'
+            - updatedTime
+            - '-updatedTime'
+    - name: Accept
+      in: header
+      description: The response media type
+      schema:
+        type: string
+        enum:
+          - application/json
+          - text/csv
+        default: application/json
+  responses:
+    '200':
+      description: A list of Customers was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+        Pagination-Total:
+          $ref: '#/components/headers/Pagination-Total'
+        Pagination-Limit:
+          $ref: '#/components/headers/Pagination-Limit'
+        Pagination-Offset:
+          $ref: '#/components/headers/Pagination-Offset'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Customer'
+        text/csv:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Customer'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $customers = $client->customers()->search([
+            'filter' => 'firstName:John',
+        ]);
+post:
+  tags:
+    - Customers
+  summary: Create a customer (without an ID)
+  operationId: PostCustomer
+  description: >
+    Create a customer without a predefined ID.  
+
+    The customer's primary address
+
+    will be used as the default address for payment
+
+    instruments, subscriptions and invoices if none
+
+    are provided.
+
+
+    If you wish to create the customer with a predefined
+
+    ID (which we recommend to prevent duplication), you 
+
+    may use our `PUT` request described below.
+
+
+    Read our guide to [preventing
+    duplicates](https://api-guides.rebilly.com/core-concepts/preventing-duplicates)
+
+    to understand more.
+  requestBody:
+    $ref: '#/components/requestBodies/Customer'
+  responses:
+    '201':
+      $ref: '#/components/responses/Customer'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '409':
+      $ref: '#/components/responses/Conflict'
+    '422':
+      $ref: '#/components/responses/InvalidDataError'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $customerForm = new Rebilly\Entities\Customer();
+        $customerForm->setPrimaryAddress([
+            'firstName' => 'John',
+            'lastName' => 'Doe',
+            'organization' => 'Test LTD',
+            'address' => 'Test street 5',
+            'address2' => 'Test house 5',
+            'city' => 'New York',
+            'region' => 'Long Island',
+            'country' => 'US',
+            'postalCode' => '123456',
+            'emails' => [
+                [
+                    'label' => 'main',
+                    'value' => 'johndoe@testemail.com',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'secondary',
+                    'value' => 'otheremail@testemail.com',
+                ],
+            ],
+            'phoneNumbers' => [
+                [
+                    'label' => 'work',
+                    'value' => '+123456789',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'home',
+                    'value' => '+9874654321',
+                ],
+            ],
+        ]);
+
+        try {
+            $customer = $client->customers()->create($customerForm);
+        } catch (UnprocessableEntityException $e) {
+            echo $e->getMessage();
+        }

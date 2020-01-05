@@ -1,7 +1,0 @@
-type: object
-properties:
-  orderHistoryDayItems:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/OrderHistoryDayItem'

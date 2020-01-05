@@ -1,0 +1,124 @@
+parameters:
+  - $ref: '#/components/parameters/resourceId'
+get:
+  tags:
+    - Contacts
+  summary: Retrieve a contact
+  operationId: GetContact
+  description: |
+    Retrieve a contact with specified identifier string
+  responses:
+    '200':
+      description: Contact was retrieved successfully
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Contact'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $contact = $client->contacts()->load('contactId');
+put:
+  tags:
+    - Contacts
+  summary: Create or update a contact with predefined ID
+  operationId: PutContact
+  description: |
+    Create or update a contact with predefined identifier string
+  requestBody:
+    $ref: '#/components/requestBodies/Contact'
+  responses:
+    '201':
+      description: Contact was created
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Contact'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '404':
+      $ref: '#/components/responses/NotFound'
+    '409':
+      description: Contact exists and cannot be updated
+    '422':
+      $ref: '#/components/responses/InvalidDataError'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $contactForm = new Rebilly\Entities\Contact();
+        $contactForm->setFirstName('Sherlock');
+        $contactForm->setLastName('Holmes');
+        $contactForm->setOrganization('TestOrganization');
+        $contactForm->setEmails(
+            [
+                [
+                    'label' => 'main',
+                    'value' => 'johndoe@testemail.com',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'secondary',
+                    'value' => 'otheremail@testemail.com',
+                ],
+            ]
+        );
+        $contactForm->setPhoneNumbers(
+            [
+                [
+                    'label' => 'work',
+                    'value' => '+123456789',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'home',
+                    'value' => '+9874654321',
+                ],
+            ]
+        );
+
+        try {
+            $contact = $client->contacts()->update('contactId', $contactForm);
+        } catch (UnprocessableEntityException $e) {
+            echo $e->getMessage();
+        }
+delete:
+  tags:
+    - Contacts
+  summary: Delete a contact
+  operationId: DeleteContact
+  description: |
+    Delete a contact with predefined identifier string
+  responses:
+    '204':
+      description: Contact was deleted
+      headers:
+        Rate-Limit-Limit:
+          $ref: '#/components/headers/Rate-Limit-Limit'
+        Rate-Limit-Remaining:
+          $ref: '#/components/headers/Rate-Limit-Remaining'
+        Rate-Limit-Reset:
+          $ref: '#/components/headers/Rate-Limit-Reset'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '402':
+      description: Contact cannot be deleted
+    '404':
+      $ref: '#/components/responses/NotFound'

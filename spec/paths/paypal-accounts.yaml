@@ -1,0 +1,96 @@
+get:
+  tags:
+    - PayPal Accounts
+  summary: Retrieve a list of PayPal accounts
+  operationId: GetPayPalAccountCollection
+  description: |
+    Retrieve a list of PayPal Accounts
+  parameters:
+    - $ref: '#/components/parameters/collectionLimit'
+    - $ref: '#/components/parameters/collectionOffset'
+  responses:
+    '200':
+      description: A list of PayPal Accounts was retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PayPalAccount'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $payPalAccounts = $client->payPalAccounts()->search([
+            'filter' => 'status:active',
+        ]);
+post:
+  tags:
+    - PayPal Accounts
+  summary: Create a PayPal Account
+  operationId: PostPayPalAccount
+  description: |
+    Create a PayPal Account
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/PayPalAccount'
+    description: PayPalAccount resource
+    required: true
+  responses:
+    '201':
+      description: PayPal Account was created
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PayPalAccount'
+    '401':
+      $ref: '#/components/responses/AccessForbidden'
+    '422':
+      $ref: '#/components/responses/InvalidDataError'
+  x-code-samples:
+    - lang: PHP
+      source: |
+        $payPalForm = new Rebilly\Entities\PayPalAccount();
+        $payPalForm->setCustomerId('customerId');
+        $payPalForm->setBillingAddress([
+            'firstName' => 'John',
+            'lastName' => 'Doe',
+            'organization' => 'Test LTD',
+            'address' => 'Test street 5',
+            'address2' => 'Test house 5',
+            'city' => 'New York',
+            'region' => 'Long Island',
+            'country' => 'US',
+            'postalCode' => '123456',
+            'emails' => [
+                [
+                    'label' => 'main',
+                    'value' => 'johndoe@testemail.com',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'secondary',
+                    'value' => 'otheremail@testemail.com',
+                ],
+            ],
+            'phoneNumbers' => [
+                [
+                    'label' => 'work',
+                    'value' => '+123456789',
+                    'primary' => true,
+                ],
+                [
+                    'label' => 'home',
+                    'value' => '+9874654321',
+                ],
+            ],
+        ]);
+
+        try {
+            $payPalAccount = $client->payPalAccounts()->create($payPalForm);
+        } catch (UnprocessableEntityException $e) {
+            echo $e->getMessage();
+        }

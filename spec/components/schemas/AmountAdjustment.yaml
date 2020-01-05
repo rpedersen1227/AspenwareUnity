@@ -1,0 +1,12 @@
+type: object
+discriminator:
+  propertyName: method
+properties:
+  method:
+    type: string
+    enum:
+      - none
+      - partial
+      - discount
+required:
+  - method

@@ -1,5 +1,0 @@
-type: object
-properties:
-  totalDaysForCurrentSeason:
-    format: int32
-    type: integer
