@@ -3,5 +3,6 @@ apiTitle: UnityAPI
 splitSpec: true
 codeSamples: true
 swaggerUI: true
-travis: false
+travis: true
+repo: rpedersen1227/AspenwareUnity
 oasVersion: '2.0'
