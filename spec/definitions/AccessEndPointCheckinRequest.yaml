@@ -1,4 +1,0 @@
-type: object
-properties:
-  accessEndPoint:
-    $ref: '#/definitions/AccessEndPoint'

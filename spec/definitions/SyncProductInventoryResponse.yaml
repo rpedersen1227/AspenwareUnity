@@ -1,9 +1,0 @@
-type: object
-properties:
-  status:
-    type: string
-  productAttributes:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/ProductAttribute'

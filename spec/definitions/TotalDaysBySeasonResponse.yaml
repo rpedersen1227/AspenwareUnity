@@ -1,7 +1,0 @@
-type: object
-properties:
-  seasonDays:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/SeasonDays'

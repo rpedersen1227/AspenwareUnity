@@ -1,8 +1,0 @@
-type: object
-properties:
-  totalStudents:
-    type: string
-  productComponentCode:
-    type: string
-  comment:
-    type: string

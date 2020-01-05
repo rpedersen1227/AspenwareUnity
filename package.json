@@ -1,5 +1,5 @@
 {
-  "name": "unity",
+  "name": "unityapi",
   "version": "1.0.0",
   "dependencies": {
     "swagger-repo": "^2.0.0-rc.15"

@@ -1,4 +1,0 @@
-type: object
-properties:
-  productFamily:
-    $ref: '#/definitions/ProductFamily'

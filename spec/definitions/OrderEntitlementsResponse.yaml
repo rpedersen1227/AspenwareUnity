@@ -1,7 +1,0 @@
-type: object
-properties:
-  entitlements:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/Entitlement'

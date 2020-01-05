@@ -1,8 +1,0 @@
-type: object
-properties:
-  inventory:
-    uniqueItems: false
-    type: array
-    items:
-      format: int32
-      type: integer

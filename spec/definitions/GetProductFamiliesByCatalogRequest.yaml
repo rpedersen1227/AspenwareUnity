@@ -1,6 +1,0 @@
-type: object
-properties:
-  salesChannelId:
-    $ref: '#/definitions/Identifier'
-  includeProducts:
-    type: boolean

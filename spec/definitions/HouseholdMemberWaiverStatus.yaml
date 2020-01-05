@@ -1,8 +1,0 @@
-type: object
-properties:
-  contactId:
-    $ref: '#/definitions/Identifier'
-  isPrimary:
-    type: boolean
-  hasWaiver:
-    type: boolean

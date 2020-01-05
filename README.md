@@ -1,14 +1,5 @@
-# Unity OpenAPI Specification
-[![Build Status](https://travis-ci.com/rpedersen1227/AspenwareUnity.svg?branch=master)](https://travis-ci.com/rpedersen1227/AspenwareUnity)
+# UnityAPI OpenAPI Specification
 
-
-## Links
-
-- [Reference Documentation (ReDoc)](https://rpedersen1227.github.io/AspenwareUnity/)
-- [SwaggerUI](https://rpedersen1227.github.io/AspenwareUnity/swagger-ui/)
-- OpenAPI Raw Files: [JSON](https://rpedersen1227.github.io/AspenwareUnity/openapi.json) [YAML](https://rpedersen1227.github.io/AspenwareUnity/openapi.yaml)
-
-**Warning:** All above links are updated only after Travis CI finishes deployment
 
 ## Working on specification
 ### Install

@@ -1,4 +1,0 @@
-type: object
-properties:
-  photoUrl:
-    type: string

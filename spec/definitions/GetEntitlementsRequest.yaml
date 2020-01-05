@@ -1,9 +1,0 @@
-type: object
-properties:
-  productIds:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/Identifier'
-  filterCodes:
-    type: string

@@ -1,8 +1,0 @@
-type: object
-properties:
-  release:
-    $ref: '#/definitions/ReleaseOfLiability'
-  success:
-    type: boolean
-  message:
-    type: string

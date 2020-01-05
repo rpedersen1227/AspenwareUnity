@@ -1,7 +1,0 @@
-type: object
-properties:
-  orderLineItems:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/OrderHistoryItem'

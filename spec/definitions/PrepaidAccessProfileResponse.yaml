@@ -1,7 +1,0 @@
-type: object
-properties:
-  prepaidAccessProfiles:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/definitions/PrepaidAccessProfile'
