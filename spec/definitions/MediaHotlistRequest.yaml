@@ -1,0 +1,23 @@
+type: object
+properties:
+  ipCode:
+    format: int32
+    type: integer
+  passMediaCode:
+    type: string
+  accessHotlistCode:
+    format: int32
+    type: integer
+  accessProductTypeCode:
+    format: int32
+    type: integer
+  commentText:
+    type: string
+  effectiveDate:
+    format: date-time
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  groupAccessIndividual:
+    type: string

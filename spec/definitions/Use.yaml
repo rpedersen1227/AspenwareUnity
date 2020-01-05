@@ -1,0 +1,26 @@
+type: object
+properties:
+  useId:
+    $ref: '#/definitions/Identifier'
+  resource:
+    $ref: '#/definitions/Resource'
+  resourceId:
+    $ref: '#/definitions/Identifier'
+  entitlement:
+    $ref: '#/definitions/Entitlement'
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  useDate:
+    format: date-time
+    type: string
+  usageId:
+    $ref: '#/definitions/Identifier'
+  usageDetailId:
+    $ref: '#/definitions/Identifier'
+  points:
+    format: int32
+    type: integer
+  updatedBy:
+    $ref: '#/definitions/Identifier'
+  isValid:
+    type: boolean

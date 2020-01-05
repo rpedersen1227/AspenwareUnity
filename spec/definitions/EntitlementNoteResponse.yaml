@@ -1,0 +1,8 @@
+type: object
+properties:
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  noteId:
+    $ref: '#/definitions/Identifier'
+  note:
+    type: string

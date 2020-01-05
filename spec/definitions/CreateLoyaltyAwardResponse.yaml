@@ -1,0 +1,11 @@
+type: object
+properties:
+  voucherId:
+    $ref: '#/definitions/Identifier'
+  voucherDescription:
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  voucherText:
+    type: string

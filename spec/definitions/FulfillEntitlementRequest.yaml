@@ -1,0 +1,31 @@
+type: object
+properties:
+  clientCode:
+    type: string
+  confirmationNumber:
+    type: string
+  entitlements:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Entitlement'
+example:
+  clientCode: '171'
+  confirmationNumber: ABC123
+  entitlements:
+    - entitlementId:
+        ids:
+          - infoRecId: '321280841'
+            infoSourceType: 2
+      effectiveDate: '2020-01-05T10:07:34.1068964-07:00'
+      product:
+        productId:
+          ids:
+            - infoRecId: '10345'
+              infoSourceType: 1
+        classification: 0
+      identification:
+        identificationType: 0
+        chipId: '16147133534689824565'
+        isActive: false
+      entitlementStatus: 0

@@ -1,0 +1,9 @@
+type: object
+properties:
+  productCode:
+    type: string
+  locationCode:
+    type: string
+  numberOfDays:
+    format: int32
+    type: integer

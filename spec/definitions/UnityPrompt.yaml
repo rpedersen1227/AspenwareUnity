@@ -1,0 +1,11 @@
+type: object
+properties:
+  code:
+    format: int32
+    type: integer
+  data:
+    type: string
+  text:
+    type: string
+  type:
+    type: string

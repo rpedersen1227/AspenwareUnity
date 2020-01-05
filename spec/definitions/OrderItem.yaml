@@ -1,0 +1,32 @@
+type: object
+properties:
+  orderId:
+    $ref: '#/definitions/Identifier'
+  orderItemId:
+    $ref: '#/definitions/Identifier'
+  quantity:
+    format: int32
+    type: integer
+  overridePrice:
+    type: boolean
+  price:
+    format: double
+    type: number
+  currencyCode:
+    type: string
+  product:
+    $ref: '#/definitions/Product'
+  autoFulfill:
+    type: boolean
+  reservations:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Reservation'
+  orderItemDays:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/OrderItemDay'
+  lineOfBusiness:
+    type: string

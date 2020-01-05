@@ -1,0 +1,26 @@
+type: object
+properties:
+  externalOrderId:
+    type: string
+  externalOrderLine:
+    type: string
+  transactionId:
+    type: string
+  transactionLine:
+    format: int32
+    type: integer
+  accessCode:
+    type: string
+  productDate:
+    format: date-time
+    type: string
+  effectiveDate:
+    format: date-time
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  productHeaderConsumerDescription:
+    type: string
+  description:
+    type: string

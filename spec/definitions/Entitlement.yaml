@@ -1,0 +1,95 @@
+type: object
+properties:
+  name:
+    type: string
+  description:
+    type: string
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  effectiveDate:
+    format: date-time
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  entitlementTypeId:
+    $ref: '#/definitions/Identifier'
+  entitlementType:
+    $ref: '#/definitions/EntitlementType'
+  product:
+    $ref: '#/definitions/Product'
+  productFamily:
+    $ref: '#/definitions/ProductFamily'
+  attributes:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/EntitlementAttribute'
+  contactId:
+    $ref: '#/definitions/Identifier'
+  orderItemId:
+    $ref: '#/definitions/Identifier'
+  productId:
+    $ref: '#/definitions/Identifier'
+  productAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductAttributeValue'
+  identification:
+    $ref: '#/definitions/Identification'
+  usage:
+    $ref: '#/definitions/Usage'
+  entitlementStatus:
+    enum:
+      - Unknown
+      - Active
+      - Returned
+      - Expired
+      - NoWaiver
+      - Hotlist
+    type: string
+  entitlementStatusDetails:
+    $ref: '#/definitions/EntitlementStatusDetails'
+  orderItem:
+    $ref: '#/definitions/OrderItem'
+  price:
+    format: double
+    type: number
+  type:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+example:
+  entitlementId:
+    ids:
+      - infoRecId: '36717653'
+        infoSourceType: 2
+        sourceName: ''
+  entitlementType:
+    classification: 0
+    name: AccessProduct
+    entitlementAttributeValues:
+      - name: Description
+        value: Ikon Base Pass
+      - name: Season
+        value: 2019-2020
+      - name: AgeBin
+        value: Adult
+    entitlementFulfillmentSeasonAttributes:
+      - id: 4
+        description: Winter 2019-2020
+  attributes:
+    - id: EmergencyName
+      value: 4YQP9186
+      options: []
+  orderItemId:
+    ids:
+      - infoRecId: '45896395'
+        infoSourceType: 1
+        sourceName: ''
+  entitlementStatus: 0
+  entitlementStatusDetails:
+    entitlementStatus: 1

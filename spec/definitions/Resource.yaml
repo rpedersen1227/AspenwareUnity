@@ -1,0 +1,17 @@
+type: object
+properties:
+  resourceId:
+    $ref: '#/definitions/Identifier'
+  name:
+    type: string
+  number:
+    type: string
+  description:
+    type: string
+  location:
+    $ref: '#/definitions/Location'
+  locationId:
+    $ref: '#/definitions/Identifier'
+  points:
+    format: int32
+    type: integer

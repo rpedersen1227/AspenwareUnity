@@ -1,0 +1,71 @@
+get:
+  tags:
+    - Users
+  summary: Find a UnityAPI.Models.User based on the supplied query string values.
+  operationId: Get
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: nodeId
+      in: query
+      required: false
+      type: string
+    - name: username
+      in: query
+      required: false
+      type: string
+    - name: email
+      in: query
+      required: false
+      type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/User'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - user
+post:
+  tags:
+    - Users
+  summary: Create a new User.
+  operationId: Post
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: user
+      in: body
+      required: false
+      schema:
+        $ref: '#/definitions/User'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '201':
+      description: Success
+      schema:
+        $ref: '#/definitions/Identifier'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - user

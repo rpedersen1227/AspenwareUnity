@@ -1,0 +1,28 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/definitions/Identifier'
+  shippingAddress:
+    $ref: '#/definitions/ShippingAddress'
+example:
+  customerId:
+    ids:
+      - infoRecId: '123456'
+        infoSourceType: 1
+        sourceName: ''
+  shippingAddress:
+    addressId:
+      ids:
+        - infoRecId: '16541322'
+          infoSourceType: 1
+          sourceName: ''
+    isPrimary: true
+    streetAddress: 16541322 main st
+    zipPostalCode: '80203'
+    city: Denver
+    countryId: USA
+    stateProvinceId: CO
+    email: aw-16541322@test.com
+    phoneNumber: 888-867-5309
+    firstName: First16541322
+    lastName: Last16541322

@@ -1,0 +1,28 @@
+swagger: '2.0'
+info:
+  version: '4.0'
+  title: Unity API v3.0
+  description: >-
+    The Unity eCommerce API.<br/><br/>Use the <strong>'Authorize'</strong>
+    button to gain access to any API methods that require
+    authorization.<br/><br/>
+securityDefinitions:
+  oauth2:
+    flow: application
+    authorizationUrl: 'https://localhost:59069/connect/authorization'
+    tokenUrl: 'https://localhost:59069/connect/token'
+    scopes:
+      service.access: access control service
+      service.account: account service
+      service.contact: contact service
+      service.customer: customer service
+      service.entitlement: entitlement service
+      service.itinerary: itinerary service
+      service.loyalty: loyalty service
+      service.media: media service
+      service.order: order service
+      service.product: product service
+      service.user: user service
+      service.worker: worker service
+      services: services
+    type: oauth2

@@ -1,0 +1,43 @@
+type: object
+properties:
+  hasActiveMedia:
+    type: boolean
+  seasonDays:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SeasonDays'
+  allTimeDays:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SeasonDays'
+  seasonUses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SeasonUses'
+  allTimeUses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SeasonUses'
+  skiDays:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SkiDays'
+  prepaidAccess:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/PrepaidAccess'
+  seasonPasses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Ticket'
+  daysRank:
+    $ref: '#/definitions/AccessDaysRank'
+  ridesRank:
+    $ref: '#/definitions/AccessRidesRank'

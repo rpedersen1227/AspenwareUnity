@@ -1,0 +1,14 @@
+type: object
+properties:
+  attributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/AttributeValue'
+  name:
+    type: string
+  quantityOnHand:
+    format: int32
+    type: integer
+  sku:
+    type: string

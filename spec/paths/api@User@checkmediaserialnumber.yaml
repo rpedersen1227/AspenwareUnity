@@ -1,0 +1,31 @@
+post:
+  tags:
+    - User
+  operationId: CheckMediaSerialNumber
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: mediaSerialNumber
+      in: body
+      required: false
+      schema:
+        $ref: '#/definitions/CheckMediaSerialNumber'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/CheckResponse'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - user

@@ -1,0 +1,7 @@
+type: object
+properties:
+  uses:
+    format: int32
+    type: integer
+  location:
+    type: string

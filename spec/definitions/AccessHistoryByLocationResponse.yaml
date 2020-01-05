@@ -1,0 +1,7 @@
+type: object
+properties:
+  allTimeUses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/LocationUses'

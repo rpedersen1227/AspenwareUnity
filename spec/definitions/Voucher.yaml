@@ -1,0 +1,48 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  code:
+    type: string
+  description:
+    type: string
+  voucherType:
+    type: string
+  voucherStatus:
+    type: string
+  comment:
+    type: string
+  statusMessage:
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  displayName:
+    type: string
+  totalValue:
+    format: double
+    type: number
+  currentValue:
+    format: double
+    type: number
+  clientCode:
+    format: int32
+    type: integer
+  voucherId:
+    $ref: '#/definitions/Identifier'
+  contactId:
+    $ref: '#/definitions/Identifier'
+  productId:
+    $ref: '#/definitions/Identifier'
+  orderId:
+    $ref: '#/definitions/Identifier'
+  orderDate:
+    format: date-time
+    type: string
+  productComponents:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductComponent'

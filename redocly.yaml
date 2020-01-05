@@ -1,0 +1,8 @@
+specFileName: 'c:\\unityv4\unityv4.json.txt'
+apiTitle: Unity
+splitSpec: true
+codeSamples: true
+swaggerUI: true
+travis: true
+repo: rpedersen1227/AspenwareUnity
+oasVersion: '2.0'

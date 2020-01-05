@@ -1,0 +1,8 @@
+type: object
+properties:
+  productFamilyId:
+    $ref: '#/definitions/Identifier'
+  includeProducts:
+    type: boolean
+  clientCode:
+    type: string

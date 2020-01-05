@@ -1,0 +1,9 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/definitions/Identifier'
+  householdMembers:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/HouseholdMember'

@@ -1,0 +1,61 @@
+type: object
+properties:
+  reservationId:
+    $ref: '#/definitions/Identifier'
+  releases:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ReleaseOfLiability'
+  quantity:
+    format: int32
+    type: integer
+  reservationDate:
+    type: string
+  reservationEndDate:
+    type: string
+  contact:
+    $ref: '#/definitions/Contact'
+  productId:
+    $ref: '#/definitions/Identifier'
+  product:
+    $ref: '#/definitions/Product'
+  locationId:
+    $ref: '#/definitions/Identifier'
+  productInventoryLocations:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductInventoryLocation'
+  lockTag:
+    type: string
+  price:
+    format: double
+    type: number
+  priceTag:
+    type: string
+  shippingDetails:
+    $ref: '#/definitions/ShippingDetails'
+  taxDetails:
+    $ref: '#/definitions/TaxDetails'
+  productAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductAttributeValue'
+  prompts:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ReservationPrompt'
+  rentalDetails:
+    $ref: '#/definitions/RentalDetails'
+  privateLessonDetails:
+    $ref: '#/definitions/PrivateLessonDetails'
+  autofulfill:
+    type: boolean
+  requestLockId:
+    format: int32
+    type: integer
+  productHeaderCode:
+    type: string

@@ -1,0 +1,7 @@
+type: object
+properties:
+  resourceItems:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ResourceItem'

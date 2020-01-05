@@ -1,0 +1,15 @@
+type: object
+properties:
+  entitlementTypeIds:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Identifier'
+  startDate:
+    format: date-time
+    type: string
+  endDate:
+    format: date-time
+    type: string
+  contactId:
+    $ref: '#/definitions/Identifier'

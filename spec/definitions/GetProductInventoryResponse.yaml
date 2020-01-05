@@ -1,0 +1,7 @@
+type: object
+properties:
+  inventoryItems:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/InventoryItem'

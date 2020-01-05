@@ -1,0 +1,35 @@
+post:
+  tags:
+    - Contacts
+  summary: 'Finds an existing Contact based on Identification, ex. media, chip, etc'
+  operationId: GetContactByIdentification
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: identification
+      in: body
+      description: The Contact's Identification
+      required: false
+      schema:
+        $ref: '#/definitions/Identification'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/Contact'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found
+  security:
+    - oauth2:
+        - services
+        - contact

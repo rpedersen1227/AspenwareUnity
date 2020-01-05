@@ -1,0 +1,14 @@
+type: object
+properties:
+  firstName:
+    type: string
+  lastName:
+    type: string
+  birthDate:
+    format: date-time
+    type: string
+  searchString:
+    type: string
+  terminalClientCode:
+    format: int32
+    type: integer

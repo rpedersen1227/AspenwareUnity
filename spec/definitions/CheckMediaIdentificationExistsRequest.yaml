@@ -1,0 +1,6 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/definitions/Identifier'
+  identification:
+    $ref: '#/definitions/Identification'

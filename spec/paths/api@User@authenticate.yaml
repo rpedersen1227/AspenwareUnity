@@ -1,0 +1,31 @@
+post:
+  tags:
+    - User
+  operationId: Authenticate
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: login
+      in: body
+      required: false
+      schema:
+        $ref: '#/definitions/Login'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/LoginResponse'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - user

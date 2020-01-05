@@ -1,0 +1,16 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/definitions/Identifier'
+  authorizationTypeCode:
+    format: int32
+    type: integer
+  statusCode:
+    format: int32
+    type: integer
+  effectiveDate:
+    type: string
+  expirationDate:
+    type: string
+  commentText:
+    type: string

@@ -1,0 +1,19 @@
+type: object
+properties:
+  rolAccepted:
+    type: string
+  rolText:
+    type: string
+  rolCode:
+    type: string
+  rolStartEffectiveDate:
+    format: date-time
+    type: string
+  rolEndEffectiveDate:
+    format: date-time
+    type: string
+  signature:
+    type: string
+  signatureDate:
+    format: date-time
+    type: string

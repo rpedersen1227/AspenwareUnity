@@ -1,0 +1,10 @@
+type: object
+properties:
+  uses:
+    format: int32
+    type: integer
+  date:
+    format: date-time
+    type: string
+  location:
+    type: string

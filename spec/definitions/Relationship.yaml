@@ -1,0 +1,6 @@
+type: object
+properties:
+  relationshipType:
+    type: string
+  relationshipGroupId:
+    $ref: '#/definitions/Identifier'

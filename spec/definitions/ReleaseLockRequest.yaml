@@ -1,0 +1,7 @@
+type: object
+properties:
+  lockId:
+    format: int32
+    type: integer
+  store:
+    type: string

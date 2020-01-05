@@ -1,0 +1,26 @@
+type: object
+properties:
+  search:
+    $ref: '#/definitions/Search'
+  pageNumber:
+    format: int32
+    type: integer
+  pageSize:
+    format: int32
+    type: integer
+example:
+  search:
+    searchString: guest
+    mediaNumber: ''
+    name: ''
+    phone: ''
+    email: ''
+    birthDate: ''
+    contactId:
+      ids:
+        - infoRecId: ''
+          infoSourceType: 0
+          sourceName: ''
+    postalCode: ''
+  pageNumber: 0
+  pageSize: 50

@@ -1,0 +1,10 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/definitions/Identifier'
+  orderId:
+    $ref: '#/definitions/Identifier'
+  transactionId:
+    $ref: '#/definitions/Identifier'
+  entitlementId:
+    $ref: '#/definitions/Identifier'

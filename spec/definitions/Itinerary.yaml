@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  itineraryId:
+    $ref: '#/definitions/Identifier'
+  arrivalDate:
+    type: string
+  departureDate:
+    type: string

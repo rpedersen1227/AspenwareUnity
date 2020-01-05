@@ -1,0 +1,10 @@
+type: object
+properties:
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  identification:
+    $ref: '#/definitions/Identification'
+  success:
+    type: boolean
+  message:
+    type: string

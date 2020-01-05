@@ -1,0 +1,9 @@
+type: object
+properties:
+  productFamily:
+    $ref: '#/definitions/ProductFamily'
+  products:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Product'

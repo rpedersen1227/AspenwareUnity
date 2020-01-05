@@ -1,0 +1,15 @@
+type: object
+properties:
+  lineOfBusinessId:
+    $ref: '#/definitions/Identifier'
+  parentLOBId:
+    $ref: '#/definitions/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  children:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/LineOfBusiness'

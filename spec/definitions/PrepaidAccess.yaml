@@ -1,0 +1,25 @@
+type: object
+properties:
+  consumerDescription:
+    type: string
+  effectiveDate:
+    format: date-time
+    type: string
+  expirationDate:
+    format: date-time
+    type: string
+  days:
+    format: int32
+    type: integer
+  remainingDays:
+    format: int32
+    type: integer
+  accessHotlistCode:
+    format: int32
+    type: integer
+  firstUseDate:
+    format: date-time
+    type: string
+  lastUseDate:
+    format: date-time
+    type: string

@@ -1,0 +1,10 @@
+type: object
+properties:
+  priceDate:
+    type: string
+  price:
+    format: double
+    type: number
+  associatedReservationId:
+    format: int32
+    type: integer

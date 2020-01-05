@@ -1,0 +1,7 @@
+type: object
+properties:
+  confirmations:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/EntitlementConfirmation'

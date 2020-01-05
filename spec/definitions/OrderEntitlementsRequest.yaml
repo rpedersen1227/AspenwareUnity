@@ -1,0 +1,6 @@
+type: object
+properties:
+  orderId:
+    $ref: '#/definitions/Identifier'
+  filterCodes:
+    type: string
