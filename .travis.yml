@@ -1,4 +1,6 @@
 language: node_js
+env:
+  - GH_TOKEN=bf0615c7cb0596a486cd75f1d5f3305a45f881f7
 node_js:
   - "node"
 deploy:
