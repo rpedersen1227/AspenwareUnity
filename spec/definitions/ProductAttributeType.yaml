@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: string
+  productAttributeTypeId:
+    $ref: '#/definitions/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  productAttributeTypeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductAttributeTypeValue'

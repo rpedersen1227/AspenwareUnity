@@ -1,0 +1,31 @@
+type: object
+properties:
+  activityCode:
+    type: string
+  activityDescription:
+    type: string
+  activityLocationCode:
+    type: string
+  startTime:
+    type: string
+  activityPlanCode:
+    type: string
+  activityScheduleCode:
+    type: string
+  availableInventoryCount:
+    format: int32
+    type: integer
+  dayBasedInd:
+    type: string
+  duration:
+    format: int32
+    type: integer
+  lockId:
+    format: int32
+    type: integer
+  positionNumber:
+    format: int32
+    type: integer
+  quantity:
+    format: int32
+    type: integer

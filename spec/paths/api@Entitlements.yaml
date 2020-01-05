@@ -1,0 +1,58 @@
+put:
+  tags:
+    - Entitlements
+  summary: "Creates or Updates a list of Entitlements for a Contact\r\nMay also link Media to Entitlements"
+  operationId: UpdateEntitlements
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: request
+      in: body
+      description: An UpdateEntitlementsRequest object
+      required: false
+      schema:
+        $ref: '#/definitions/UpdateEntitlementsRequest'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+post:
+  tags:
+    - Entitlements
+  summary: >-
+    Generates an Access Code based on Entitlement Type and links to Media to
+    enable "direct to lift" access
+  operationId: CreateEntitlementWithIdentificationNoContact
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: request
+      in: body
+      description: A CreateEntitlementWithIdentificationNoContactRequest object
+      required: false
+      schema:
+        $ref: '#/definitions/CreateEntitlementWithIdentificationNoContactRequest'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '201':
+      description: Success
+      schema:
+        $ref: '#/definitions/CreateEntitlementWithIdentificationNoContactResponse'
+    '401':
+      description: Unauthorized

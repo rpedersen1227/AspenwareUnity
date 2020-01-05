@@ -1,0 +1,30 @@
+type: object
+properties:
+  identificationType:
+    enum:
+      - Media
+      - User
+      - License
+    type: string
+  identificationId:
+    $ref: '#/definitions/Identifier'
+  serialNumber:
+    type: string
+  mediaTypeDescription:
+    type: string
+  chipId:
+    type: string
+  barcodeId:
+    type: string
+  magneticStripId:
+    type: string
+  username:
+    type: string
+  licensePlateNumber:
+    type: string
+  isActive:
+    type: boolean
+example:
+  identificationType: 0
+  barcodeId: I90001234567890
+  isActive: true

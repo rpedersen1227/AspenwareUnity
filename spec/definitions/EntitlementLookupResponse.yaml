@@ -1,0 +1,28 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/definitions/Identifier'
+  contactName:
+    type: string
+  validLiftAccess:
+    type: boolean
+  accessProductName:
+    type: string
+  accessDaysRemaining:
+    format: int32
+    type: integer
+  accessUsedToday:
+    type: boolean
+  validPassMedia:
+    type: boolean
+  passMediaCode:
+    type: string
+  rfid:
+    type: string
+  skiSchoolProductName:
+    type: string
+  skiSchoolDaysRemaining:
+    format: int32
+    type: integer
+  skiSchoolUsedToday:
+    type: boolean

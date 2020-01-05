@@ -1,0 +1,33 @@
+post:
+  tags:
+    - Contacts
+  summary: Adds a dependent to a Contact
+  operationId: AddContactDependent
+  consumes:
+    - application/json
+  produces: []
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      type: string
+    - name: dependent
+      in: body
+      description: The dependent as a Contact object
+      required: false
+      schema:
+        $ref: '#/definitions/Contact'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/Identifier'
+    '401':
+      description: Unauthorized

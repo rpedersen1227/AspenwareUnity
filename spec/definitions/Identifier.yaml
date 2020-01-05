@@ -1,0 +1,7 @@
+type: object
+properties:
+  ids:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SourceIdentifier'

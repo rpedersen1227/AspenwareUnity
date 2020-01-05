@@ -1,0 +1,10 @@
+type: object
+properties:
+  dinLookupValue:
+    format: int32
+    type: integer
+  listDescription:
+    type: string
+  listKey:
+    format: int32
+    type: integer

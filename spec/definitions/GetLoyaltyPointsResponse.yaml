@@ -1,0 +1,16 @@
+type: object
+properties:
+  loyaltyId:
+    $ref: '#/definitions/Identifier'
+  loyaltyPoints:
+    format: int32
+    type: integer
+  adjustmentPoints:
+    format: int32
+    type: integer
+  awardPoints:
+    format: int32
+    type: integer
+  pointsBalance:
+    format: int32
+    type: integer

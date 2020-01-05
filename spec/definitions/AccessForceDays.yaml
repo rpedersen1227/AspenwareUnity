@@ -1,0 +1,19 @@
+type: object
+properties:
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  accessProductTypeCode:
+    format: int32
+    type: integer
+  scanTypeDescription:
+    type: string
+  updateDate:
+    format: date-time
+    type: string
+  forceDays:
+    format: int32
+    type: integer
+  comments:
+    type: string
+  updatedBy:
+    $ref: '#/definitions/Identifier'

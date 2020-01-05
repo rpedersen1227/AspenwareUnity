@@ -1,0 +1,13 @@
+type: object
+properties:
+  contacts:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/SearchContact'
+  pageNumber:
+    format: int32
+    type: integer
+  pageSize:
+    format: int32
+    type: integer

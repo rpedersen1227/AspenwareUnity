@@ -1,0 +1,43 @@
+type: object
+properties:
+  usageId:
+    $ref: '#/definitions/Identifier'
+  entitlement:
+    $ref: '#/definitions/Entitlement'
+  entitlementId:
+    $ref: '#/definitions/Identifier'
+  uoM:
+    enum:
+      - Day
+      - Hr
+      - Min
+      - Lesson
+      - Item
+    type: string
+  totalUsage:
+    format: int32
+    type: integer
+  firstUsageDate:
+    format: date-time
+    type: string
+  lastUsageDate:
+    format: date-time
+    type: string
+  usedToday:
+    type: boolean
+    readOnly: true
+  remainingDays:
+    format: int32
+    type: integer
+  usageDetails:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/UsageDetail'
+  uses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Use'
+  updatedBy:
+    $ref: '#/definitions/Identifier'

@@ -1,0 +1,15 @@
+type: object
+properties:
+  userId:
+    $ref: '#/definitions/Identifier'
+  userName:
+    type: string
+  title:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  birthDate:
+    format: date-time
+    type: string

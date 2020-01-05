@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Order
+  summary: Get a list of orders that the user placed in a given month
+  operationId: GetOrdersInMonth
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: nodeId
+      in: query
+      required: false
+      type: string
+    - name: date
+      in: query
+      description: The date of the month to return orders for
+      required: false
+      type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/OrdersInDayResponse'
+    '401':
+      description: Unauthorized

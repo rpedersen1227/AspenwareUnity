@@ -1,0 +1,33 @@
+get:
+  tags:
+    - Entitlements
+  summary: Get voucher
+  operationId: GetVoucher
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: voucherNodeId
+      in: path
+      description: ''
+      required: true
+      type: string
+    - name: reportCodeCheck
+      in: path
+      description: ''
+      required: true
+      type: boolean
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/Voucher'
+    '401':
+      description: Unauthorized

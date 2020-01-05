@@ -1,0 +1,25 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/definitions/Identifier'
+  isActive:
+    type: boolean
+  comments:
+    type: string
+  rolAccepted:
+    type: string
+  rolText:
+    type: string
+  rolCode:
+    type: string
+  rolStartEffectiveDate:
+    format: date-time
+    type: string
+  rolEndEffectiveDate:
+    format: date-time
+    type: string
+  signature:
+    type: string
+  signatureDate:
+    format: date-time
+    type: string

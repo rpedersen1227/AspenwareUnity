@@ -1,0 +1,66 @@
+get:
+  tags:
+    - Access
+  summary: Gets force days history for Access / Entitlement
+  operationId: GetAccessForceDays
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: entitlementId
+      in: query
+      description: Entitlement Identifier
+      required: false
+      type: string
+    - name: accessProductTypeCode
+      in: query
+      description: Access Product type code
+      required: false
+      type: integer
+      format: int32
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/AccessForceDays'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found
+post:
+  tags:
+    - Access
+  summary: Adds force days to Access / Entitlement
+  operationId: AddAccessForceDays
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: accessForceDays
+      in: body
+      description: AccessForceDays object
+      required: false
+      schema:
+        $ref: '#/definitions/AccessForceDays'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized

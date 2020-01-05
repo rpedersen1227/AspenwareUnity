@@ -1,0 +1,27 @@
+get:
+  tags:
+    - Access
+  summary: Gets the user's current days rank.
+  operationId: CurrentDaysRank
+  consumes:
+    - application/json
+  produces: []
+  parameters:
+    - name: nodeId
+      in: path
+      description: ''
+      required: true
+      type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/CurrentDaysRankResponse'
+    '401':
+      description: Unauthorized

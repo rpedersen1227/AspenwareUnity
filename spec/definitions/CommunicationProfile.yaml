@@ -1,0 +1,28 @@
+type: object
+properties:
+  profileTypeCode:
+    format: int32
+    type: integer
+  profileTypeDescription:
+    type: string
+  profileTypeDisplayOrder:
+    format: int32
+    type: integer
+  sequenceNumber:
+    format: int32
+    type: integer
+  statusCode:
+    format: int32
+    type: integer
+  statusDescription:
+    type: string
+  doNotMailInd:
+    type: string
+  doNotPhoneInd:
+    type: string
+  doNotFaxInd:
+    type: string
+  doNotEmailInd:
+    type: string
+  doNotDistributeInd:
+    type: string

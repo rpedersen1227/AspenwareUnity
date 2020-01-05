@@ -1,0 +1,10 @@
+type: object
+properties:
+  deviceId:
+    $ref: '#/definitions/Identifier'
+  locationId:
+    $ref: '#/definitions/Identifier'
+  resourceId:
+    $ref: '#/definitions/Identifier'
+  resource:
+    $ref: '#/definitions/Resource'

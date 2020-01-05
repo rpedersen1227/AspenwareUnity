@@ -1,0 +1,23 @@
+post:
+  tags:
+    - NodeId
+  operationId: NodeIdPost
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: id
+      in: body
+      required: false
+      schema:
+        $ref: '#/definitions/Identifier'
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success

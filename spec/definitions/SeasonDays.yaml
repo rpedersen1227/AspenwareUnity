@@ -1,0 +1,9 @@
+type: object
+properties:
+  days:
+    format: int32
+    type: integer
+  season:
+    type: string
+  currentSeason:
+    type: boolean

@@ -1,0 +1,9 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/definitions/Identifier'
+  creditCard:
+    $ref: '#/definitions/CreditCard'
+  profileTypeCode:
+    format: int32
+    type: integer

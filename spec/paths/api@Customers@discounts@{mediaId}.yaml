@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Customers
+  summary: "Gets a Customer's discounts\r\nTODO reevaluate route"
+  operationId: GetDiscounts
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: mediaId
+      in: path
+      description: A chip or media id
+      required: true
+      type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/DiscountProfile'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found

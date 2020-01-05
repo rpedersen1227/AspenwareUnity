@@ -1,0 +1,48 @@
+type: object
+properties:
+  entitlements:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Entitlement'
+  media:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Media'
+  contactId:
+    $ref: '#/definitions/Identifier'
+example:
+  entitlements:
+    - entitlementId:
+        ids:
+          - infoRecId: '78665798'
+            infoSourceType: 2
+            sourceName: ''
+      entitlementType:
+        classification: 0
+        entitlementAttributeValues:
+          - name: Description
+            value: Ikon Base Pass
+          - name: Season
+            value: 2019-2020
+          - name: AgeBin
+            value: Adult
+        entitlementFulfillmentSeasonAttributes:
+          - id: 4
+            description: Winter 2019-2020
+      entitlementStatus: 0
+      entitlementStatusDetails:
+        entitlementStatus: 1
+  media:
+    - identification:
+        identificationType: 0
+        chipId: '16140000111122223333'
+        barcodeId: I98880012341234
+        isActive: false
+      mediaStatus: 1
+  contactId:
+    ids:
+      - infoRecId: '43613662'
+        infoSourceType: 1
+        sourceName: ''

@@ -1,0 +1,27 @@
+type: object
+properties:
+  inventoryItemId:
+    $ref: '#/definitions/Identifier'
+  locationId:
+    $ref: '#/definitions/Identifier'
+  productId:
+    $ref: '#/definitions/Identifier'
+  productAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductAttributeValue'
+  priceId:
+    $ref: '#/definitions/Identifier'
+  price:
+    format: double
+    type: number
+  basePrice:
+    format: double
+    type: number
+  saveAmount:
+    format: double
+    type: number
+  savePercent:
+    format: double
+    type: number

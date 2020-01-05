@@ -1,0 +1,12 @@
+type: object
+properties:
+  productId:
+    $ref: '#/definitions/Identifier'
+  locationId:
+    $ref: '#/definitions/Identifier'
+  minDate:
+    format: date-time
+    type: string
+  maxDate:
+    format: date-time
+    type: string

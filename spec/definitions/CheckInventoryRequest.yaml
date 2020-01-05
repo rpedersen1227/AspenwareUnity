@@ -1,0 +1,9 @@
+type: object
+properties:
+  checkProductInventoryRequests:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/CheckProductInventoryRequest'
+  store:
+    type: string

@@ -1,0 +1,30 @@
+type: object
+properties:
+  entitlementTypeId:
+    $ref: '#/definitions/Identifier'
+  classification:
+    enum:
+      - Single
+      - Bundle
+    type: string
+  productFamilyId:
+    $ref: '#/definitions/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  entitlementAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/EntitlementAttributeValue'
+  entitlementFulfillmentSeasonAttributes:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/BaseAttribute'
+  entitlementTypeBundle:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/EntitlementType'

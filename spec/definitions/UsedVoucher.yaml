@@ -1,0 +1,7 @@
+type: object
+properties:
+  usedValue:
+    format: double
+    type: number
+  voucher:
+    $ref: '#/definitions/Voucher'

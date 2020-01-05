@@ -1,0 +1,9 @@
+type: object
+properties:
+  productAttributeTypeId:
+    $ref: '#/definitions/Identifier'
+  productAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/ProductAttributeValue'

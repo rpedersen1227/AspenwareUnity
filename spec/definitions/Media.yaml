@@ -1,0 +1,13 @@
+type: object
+properties:
+  identification:
+    $ref: '#/definitions/Identification'
+  photo:
+    $ref: '#/definitions/Photo'
+  mediaStatus:
+    enum:
+      - Unknown
+      - Active
+      - Inactive
+      - Paused
+    type: string

@@ -1,0 +1,20 @@
+get:
+  tags:
+    - Access
+  operationId: AccessHotlistList
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      type: string
+      default: '3.0'
+  responses:
+    '200':
+      description: Success
+    '401':
+      description: Unauthorized

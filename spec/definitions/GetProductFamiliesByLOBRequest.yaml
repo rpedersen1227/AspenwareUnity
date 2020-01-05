@@ -1,0 +1,6 @@
+type: object
+properties:
+  lineOfBusinessId:
+    $ref: '#/definitions/Identifier'
+  includeProducts:
+    type: boolean

@@ -1,0 +1,28 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/definitions/Identifier'
+  billingAddress:
+    $ref: '#/definitions/BillingAddress'
+example:
+  customerId:
+    ids:
+      - infoRecId: '123456'
+        infoSourceType: 1
+        sourceName: ''
+  billingAddress:
+    addressId:
+      ids:
+        - infoRecId: '57478771'
+          infoSourceType: 1
+          sourceName: ''
+    isPrimary: true
+    streetAddress: 57478771 main st
+    zipPostalCode: '80203'
+    city: Denver
+    countryId: USA
+    stateProvinceId: CO
+    email: aw-57478771@test.com
+    phoneNumber: 888-867-5309
+    firstName: First57478771
+    lastName: Last57478771

@@ -1,0 +1,11 @@
+type: object
+properties:
+  isSuccessful:
+    type: boolean
+  errorMessage:
+    type: string
+  orderMetadata:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/OrderMetadata'
