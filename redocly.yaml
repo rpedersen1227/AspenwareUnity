@@ -1,7 +1,8 @@
-specFileName: 'c://unityv4/openapi.yaml'
+specFileName: 'c://unityv4/unityopenapi.yaml'
 apiTitle: Unity
 splitSpec: false
-codeSamples: false
+codeSamples: true
 swaggerUI: true
-travis: false
+travis: true
+repo: rpedersen1227/AspenwareUnity
 oasVersion: 3.0.0
