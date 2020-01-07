@@ -1,8 +1,7 @@
-specFileName: 'c://unityv4/tst.json.txt'
+specFileName: 'c://unityv4/example.yaml'
 apiTitle: UnityAPI
-splitSpec: true
-codeSamples: true
+splitSpec: false
+codeSamples: false
 swaggerUI: true
-travis: true
-repo: rpedersen1227/AspenwareUnity
+travis: false
 oasVersion: 3.0.0
