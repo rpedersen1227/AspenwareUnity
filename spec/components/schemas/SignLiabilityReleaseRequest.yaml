@@ -1,0 +1,26 @@
+type: object
+properties:
+  release:
+    $ref: '#/components/schemas/ReleaseOfLiability'
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  signerIsParticipant:
+    type: boolean
+  minors:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Identifier'
+example:
+  release:
+    rolCode: Code83344481
+    rolStartEffectiveDate: 2020-01-04T15:56:13.549Z
+    rolEndEffectiveDate: 2020-01-04T15:56:13.549Z
+    signature: Signature83344481
+    signatureDate: 2020-01-04T15:56:13.549Z
+  contactId:
+    ids:
+      - infoRecId: '123456'
+        infoSourceType: 2
+        sourceName: ''
+  signerIsParticipant: true

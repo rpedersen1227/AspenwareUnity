@@ -1,0 +1,11 @@
+type: object
+properties:
+  checkinValue:
+    type: string
+  checkinType:
+    type: string
+    enum:
+      - Rfid
+      - Barcode
+      - Username
+      - Unknown

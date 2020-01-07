@@ -1,0 +1,69 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  fastFlowEligibleInd:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  birthDate:
+    type: string
+    format: date-time
+  authTypeDescription:
+    type: string
+  authTypeCode:
+    type: integer
+    format: int32
+  authEffectiveDate:
+    type: string
+    format: date-time
+  authExpirationDate:
+    type: string
+    format: date-time
+  authUpdateDate:
+    type: string
+    format: date-time
+  validAuthInd:
+    type: string
+  rentalAge:
+    type: string
+  rentalWeight:
+    type: string
+  rentalHeight:
+    type: string
+  rentalSkierType:
+    type: string
+  shoeSize:
+    type: string
+  goofyInd:
+    type: string
+  rentalUpdateDate:
+    type: string
+    format: date-time
+  validRentalInd:
+    type: string
+  medication:
+    type: string
+  foodAllergy:
+    type: string
+  drugAllergy:
+    type: string
+  specialCondition:
+    type: string
+  primaryEmergencyContact:
+    type: string
+  primaryEmergencyPhone:
+    type: string
+  alternateEmergencyContact1:
+    type: string
+  aLternateEmergencyPhone1:
+    type: string
+  childRegUpdateDate:
+    type: string
+    format: date-time
+  validChildRegInd:
+    type: string
+  upcomingOrderID:
+    type: string

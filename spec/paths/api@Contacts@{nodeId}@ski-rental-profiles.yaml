@@ -1,0 +1,76 @@
+get:
+  tags:
+    - Contacts
+  summary: Gets Contact's ski rental profile
+  operationId: GetContactSkiRentalProfile
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/RentalProfile'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found
+  security:
+    - oauth2:
+        - services
+        - contact
+put:
+  tags:
+    - Contacts
+  summary: Creates or updates ski rental profile for Contact
+  operationId: SaveSkiRentalProfile
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: SaveRentalProfileRequest object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/SaveRentalProfileRequest'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - contact

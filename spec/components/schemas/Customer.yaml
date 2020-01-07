@@ -1,0 +1,80 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/components/schemas/Identifier'
+  contacts:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Contact'
+  group:
+    $ref: '#/components/schemas/RelationshipGroup'
+  shippingAddresses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/ShippingAddress'
+  billingAddresses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/BillingAddress'
+  addresses:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/BaseAddress'
+  entitlements:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Entitlement'
+  user:
+    $ref: '#/components/schemas/User'
+example:
+  customerId:
+    ids:
+      - infoRecId: '21295996'
+        infoSourceType: 2
+        sourceName: ''
+  contacts:
+    - active: false
+      contactId:
+        ids:
+          - infoRecId: '95169313'
+            infoSourceType: 2
+            sourceName: ''
+      customerId:
+        ids:
+          - infoRecId: '21295996'
+            infoSourceType: 2
+            sourceName: ''
+      isCustomerPrimary: true
+      email: r.pedersen21295996@aspenware.com
+      firstName: First
+      lastName: Last21295996
+      streetAddress: 1702 W. Dry Creek Rd
+      zipPostalCode: '80120'
+      city: Littleton
+      stateProvince: CO
+      phone: 303-944-6151
+      dateOfBirth: 1964-03-03T00:00:00.000Z
+  shippingAddresses:
+    - addressId:
+        ids:
+          - infoRecId: ''
+            infoSourceType: 0
+            sourceName: ''
+      isPrimary: true
+      streetAddress: ''
+      zipPostalCode: ''
+      city: ''
+      countryId: ''
+      stateProvince: ''
+  billingAddresses:
+    - addressId:
+        ids:
+          - infoRecId: ''
+            infoSourceType: 0
+            sourceName: ''
+      isPrimary: false

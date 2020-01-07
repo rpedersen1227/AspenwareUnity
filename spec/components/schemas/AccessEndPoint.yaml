@@ -1,0 +1,10 @@
+type: object
+properties:
+  deviceId:
+    $ref: '#/components/schemas/Identifier'
+  locationId:
+    $ref: '#/components/schemas/Identifier'
+  resourceId:
+    $ref: '#/components/schemas/Identifier'
+  resource:
+    $ref: '#/components/schemas/Resource'

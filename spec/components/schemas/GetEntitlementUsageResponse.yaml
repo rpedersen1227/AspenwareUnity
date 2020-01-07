@@ -1,0 +1,11 @@
+type: object
+properties:
+  entitlementUsages:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/UsageDetail'
+  success:
+    type: boolean
+  message:
+    type: string

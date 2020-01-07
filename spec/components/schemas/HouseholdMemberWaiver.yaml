@@ -1,0 +1,32 @@
+type: object
+properties:
+  ipCode:
+    type: integer
+    format: int32
+  profileTypeCode:
+    type: integer
+    format: int32
+  sequenceNumber:
+    type: integer
+    format: int32
+  statusCode:
+    type: integer
+    format: int32
+  effectiveDate:
+    type: string
+    format: date-time
+  authorizationTypeCode:
+    type: integer
+    format: int32
+  expirationDate:
+    type: string
+    format: date-time
+  operatorID:
+    type: string
+  updateDate:
+    type: string
+    format: date-time
+  commentText:
+    type: string
+  authorizationProfileText:
+    type: string

@@ -1,0 +1,38 @@
+put:
+  tags:
+    - Customers
+  summary: Creates or Updates a Customer's credit card waiver
+  operationId: UpdateCreditCardWaiver
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Customer Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: A UpdateResortChargeWaiverRequest object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/SaveCreditCardRequest'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - customer

@@ -1,0 +1,5 @@
+description: The Contact object
+content:
+  application/json:
+    schema:
+      $ref: '#/components/schemas/Contact'

@@ -1,0 +1,10 @@
+type: object
+properties:
+  relationshipGroupId:
+    $ref: '#/components/schemas/Identifier'
+  name:
+    type: string
+  type:
+    type: string
+  description:
+    type: string

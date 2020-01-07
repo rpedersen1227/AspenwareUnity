@@ -1,0 +1,14 @@
+type: object
+properties:
+  masterLockId:
+    type: string
+  activityCode:
+    type: string
+  productHeaderCode:
+    type: string
+  quantity:
+    type: string
+  startDateTime:
+    type: string
+  expirationDateTime:
+    type: string

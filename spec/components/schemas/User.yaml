@@ -1,0 +1,21 @@
+type: object
+properties:
+  userId:
+    $ref: '#/components/schemas/Identifier'
+  email:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  userName:
+    type: string
+  password:
+    type: string
+  securityStamp:
+    type: string
+  dateOfBirth:
+    type: string
+    format: date-time
+  gender:
+    type: string

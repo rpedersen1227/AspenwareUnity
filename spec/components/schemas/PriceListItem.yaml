@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  productId:
+    $ref: '#/components/schemas/Identifier'
+  price:
+    type: number
+    format: double
+  unitPrice:
+    type: number
+    format: double

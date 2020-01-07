@@ -1,0 +1,7 @@
+type: object
+properties:
+  details:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/LoyaltyPointsDetail'

@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  itineraryId:
+    $ref: '#/components/schemas/Identifier'
+  arrivalDate:
+    type: string
+  departureDate:
+    type: string

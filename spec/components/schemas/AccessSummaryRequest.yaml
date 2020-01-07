@@ -1,0 +1,10 @@
+type: object
+properties:
+  accessCode:
+    type: string
+  ipCode:
+    type: string
+  includeAllAccessInd:
+    type: string
+  checkNonPreloadedIP:
+    type: string

@@ -1,0 +1,15 @@
+type: object
+properties:
+  lineOfBusinessId:
+    $ref: '#/components/schemas/Identifier'
+  parentLOBId:
+    $ref: '#/components/schemas/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  children:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/LineOfBusiness'

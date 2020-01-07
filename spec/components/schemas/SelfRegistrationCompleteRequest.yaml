@@ -1,0 +1,29 @@
+type: object
+properties:
+  contactIds:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Identifier'
+  terminalClientCode:
+    type: integer
+    format: int32
+  rentalEnabled:
+    type: boolean
+  minRentalUpdateDate:
+    type: string
+    format: date-time
+  childRegistrationEnabled:
+    type: boolean
+  minChildRegUpdateDate:
+    type: string
+    format: date-time
+  authTypeCode:
+    type: integer
+    format: int32
+  minAuthProfileUpdateDate:
+    type: string
+    format: date-time
+  salesChannelCode:
+    type: integer
+    format: int32

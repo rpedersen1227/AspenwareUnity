@@ -1,0 +1,13 @@
+type: object
+properties:
+  identification:
+    $ref: '#/components/schemas/Identification'
+  photo:
+    $ref: '#/components/schemas/Photo'
+  mediaStatus:
+    type: string
+    enum:
+      - Unknown
+      - Active
+      - Inactive
+      - Paused

@@ -1,0 +1,6 @@
+type: object
+properties:
+  membershipId:
+    $ref: '#/components/schemas/Identifier'
+  description:
+    type: string

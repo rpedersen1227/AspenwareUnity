@@ -1,0 +1,9 @@
+type: object
+properties:
+  productAttributeTypeId:
+    $ref: '#/components/schemas/Identifier'
+  productAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/ProductAttributeValue'

@@ -1,0 +1,4 @@
+type: object
+properties:
+  daysRank:
+    $ref: '#/components/schemas/AccessDaysRank'

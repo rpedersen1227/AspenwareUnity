@@ -1,0 +1,64 @@
+get:
+  tags:
+    - Entitlement
+  operationId: EntitlementLookup
+  parameters:
+    - name: contactIds
+      in: query
+      required: false
+      style: form
+      explode: true
+      schema:
+        uniqueItems: false
+        type: array
+        items:
+          type: string
+    - name: liftAccessLocationCode
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: integer
+        format: int32
+    - name: skiSchoolAccessProductTypeCode
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: integer
+        format: int32
+    - name: skiSchoolAccessLocationCode
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: integer
+        format: int32
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            uniqueItems: false
+            type: array
+            items:
+              $ref: '#/components/schemas/EntitlementLookupResponse'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - entitlement

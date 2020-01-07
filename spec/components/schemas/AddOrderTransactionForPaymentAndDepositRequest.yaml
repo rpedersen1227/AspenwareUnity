@@ -1,0 +1,14 @@
+type: object
+properties:
+  externalOrderId:
+    type: string
+  externalOrderLine:
+    type: string
+  customerIpCode:
+    type: integer
+    format: int32
+  store:
+    type: string
+  depositTotal:
+    type: number
+    format: double

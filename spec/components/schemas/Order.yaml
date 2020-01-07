@@ -1,0 +1,93 @@
+type: object
+properties:
+  orderId:
+    $ref: '#/components/schemas/Identifier'
+  customer:
+    $ref: '#/components/schemas/Customer'
+  itinerary:
+    $ref: '#/components/schemas/Itinerary'
+  shippingFee:
+    type: number
+    format: double
+  shippingAddress:
+    $ref: '#/components/schemas/ShippingAddress'
+  billingAddress:
+    $ref: '#/components/schemas/BillingAddress'
+  creditCard:
+    $ref: '#/components/schemas/CreditCard'
+  waiverCreditCard:
+    $ref: '#/components/schemas/CreditCard'
+  saveToken:
+    type: boolean
+  orderItems:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/OrderItem'
+  paymentComment:
+    type: string
+  usedVouchers:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/UsedVoucher'
+  additionalPayments:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/UsedPayment'
+  errorCode:
+    type: string
+  errorMessage:
+    type: string
+  isRentalOrder:
+    type: boolean
+  saleLocationCode:
+    type: string
+  qrCode:
+    type: string
+  store:
+    type: string
+example:
+  customer:
+    customerId:
+      ids:
+        - infoRecId: '97892674'
+          infoSourceType: 1
+          sourceName: ''
+  shippingFee: 0
+  saveToken: false
+  orderItems:
+    - orderItemId:
+        ids:
+          - infoRecId: '77349532'
+            infoSourceType: 1
+            sourceName: ''
+      quantity: 3
+      overridePrice: false
+      price: 100
+      product:
+        productId:
+          ids:
+            - infoRecId: '63911'
+              infoSourceType: 1
+              sourceName: ''
+        classification: 0
+      autoFulfill: false
+      reservations:
+        - quantity: 3
+          productId:
+            ids:
+              - infoRecId: '32828'
+                infoSourceType: 1
+                sourceName: ''
+          locationId:
+            ids:
+              - infoRecId: '22089'
+                infoSourceType: 1
+                sourceName: ''
+          price: 0
+          productAttributeValues: []
+          autofulfill: false
+          requestLockId: 0
+  isRentalOrder: false
