@@ -1,7 +1,7 @@
 specFileName: 'c://unityv4/unityopenapi.yaml'
 apiTitle: Unity
 splitSpec: false
-codeSamples: true
+codeSamples: false
 swaggerUI: true
 travis: true
 repo: rpedersen1227/AspenwareUnity
