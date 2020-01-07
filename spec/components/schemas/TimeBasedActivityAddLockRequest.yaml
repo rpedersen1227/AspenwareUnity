@@ -1,0 +1,14 @@
+type: object
+properties:
+  activityCode:
+    type: string
+  productHeaderCode:
+    type: string
+  activityDateTime:
+    type: string
+  quantity:
+    type: string
+  activityLocationCode:
+    type: string
+  store:
+    type: string

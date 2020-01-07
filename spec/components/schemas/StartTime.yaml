@@ -1,0 +1,10 @@
+type: object
+properties:
+  time:
+    type: string
+  duration:
+    type: integer
+    format: int32
+  availableInventory:
+    type: integer
+    format: int32

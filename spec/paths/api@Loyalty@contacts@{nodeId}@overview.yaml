@@ -1,0 +1,61 @@
+get:
+  tags:
+    - Loyalty
+  summary: Gets an overview of the loyalty information for a given contact
+  operationId: GetLoyaltyOverview
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: passMediaTypeCode
+      in: query
+      description: The pass media type code
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: integer
+        format: int32
+    - name: loyaltyProgramCode
+      in: query
+      description: The loyalty program code
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: integer
+        format: int32
+    - name: loyaltyProgramStatusCode
+      in: query
+      description: The loyalty program status code
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: integer
+        format: int32
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LoyaltyOverview'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found

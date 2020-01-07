@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Access
+  operationId: MobileCheckin
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/MobileAccessCheckinRequest'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MobileAccessCheckinResponse'
+    '401':
+      description: Unauthorized

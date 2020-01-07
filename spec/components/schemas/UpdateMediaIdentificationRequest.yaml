@@ -1,0 +1,18 @@
+type: object
+properties:
+  identification:
+    $ref: '#/components/schemas/Identification'
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  entitlements:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Entitlement'
+example:
+  identification:
+    identificationType: 0
+    serialNumber: I90001234567890
+    chipId: '16141111222233334444'
+    barcodeId: I90001234567890
+    isActive: true

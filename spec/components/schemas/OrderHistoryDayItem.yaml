@@ -1,0 +1,10 @@
+type: object
+properties:
+  date:
+    type: string
+    format: date-time
+  orderLineItems:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/OrderHistoryItem'

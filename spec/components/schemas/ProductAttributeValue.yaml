@@ -1,0 +1,22 @@
+type: object
+properties:
+  id:
+    type: string
+  productAttributeTypeId:
+    $ref: '#/components/schemas/Identifier'
+  productAttributeValueId:
+    $ref: '#/components/schemas/Identifier'
+  productAttributeTypeValueId:
+    $ref: '#/components/schemas/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  value:
+    type: string
+  minValue:
+    type: string
+  maxValue:
+    type: string
+  valueType:
+    type: string

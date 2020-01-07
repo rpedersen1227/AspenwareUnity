@@ -1,0 +1,6 @@
+type: object
+properties:
+  isSuccessful:
+    type: boolean
+  errorMessage:
+    type: string

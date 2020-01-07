@@ -1,0 +1,12 @@
+type: object
+properties:
+  productId:
+    $ref: '#/components/schemas/Identifier'
+  locationId:
+    $ref: '#/components/schemas/Identifier'
+  minDate:
+    type: string
+    format: date-time
+  maxDate:
+    type: string
+    format: date-time

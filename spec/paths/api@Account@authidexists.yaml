@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Account
+  operationId: CheckAuthIdExists2
+  parameters:
+    - name: authId
+      in: query
+      required: false
+      style: form
+      explode: true
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Account'
+    '401':
+      description: Unauthorized

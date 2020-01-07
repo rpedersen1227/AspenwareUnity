@@ -1,0 +1,9 @@
+type: object
+properties:
+  productIds:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Identifier'
+  filterCodes:
+    type: string

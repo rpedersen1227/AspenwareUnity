@@ -1,0 +1,20 @@
+type: object
+properties:
+  activityCode:
+    type: integer
+    format: int32
+  activityLocationCode:
+    type: integer
+    format: int32
+  startTime:
+    type: string
+    format: date-time
+  endTime:
+    type: string
+    format: date-time
+  productHeaderCode:
+    type: string
+  storeTimeZoneId:
+    type: string
+  store:
+    type: string

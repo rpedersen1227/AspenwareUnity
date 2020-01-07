@@ -1,0 +1,9 @@
+type: object
+properties:
+  customerId:
+    $ref: '#/components/schemas/Identifier'
+  householdMembers:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/HouseholdMemberWaiverStatus'

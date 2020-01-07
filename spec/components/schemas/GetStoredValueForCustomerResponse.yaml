@@ -1,0 +1,5 @@
+type: object
+properties:
+  value:
+    type: number
+    format: double

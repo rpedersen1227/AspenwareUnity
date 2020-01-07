@@ -1,0 +1,25 @@
+type: object
+properties:
+  shippingMethodName:
+    type: string
+  shippingMethodCode:
+    type: string
+  shippingLocationName:
+    type: string
+  shippingLocationCode:
+    type: string
+  shippingOptionName:
+    type: string
+  shippingOptionCode:
+    type: string
+  shippingFee:
+    type: number
+    format: double
+  shipSeparately:
+    type: boolean
+  overrideShippingFeeFlag:
+    type: boolean
+  shipToAddressFlag:
+    type: boolean
+  usePrimaryShippingAddress:
+    type: boolean

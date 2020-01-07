@@ -1,0 +1,66 @@
+put:
+  tags:
+    - Media
+  summary: >-
+    Updates media identification (mapping from ChipId to
+    MediaId/Barcode/PassMediaCode)
+  operationId: UpdateMediaIdentification2
+  parameters:
+    - name: nodeId
+      in: path
+      description: Master Chip
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: An Identification object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Identification'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+delete:
+  tags:
+    - Media
+  summary: >-
+    Delete media identification (mapping from ChipId to
+    MediaId/Barcode/PassMediaCode)
+  operationId: DeleteMediaIdentification
+  parameters:
+    - name: nodeId
+      in: path
+      description: A master ChipId
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized

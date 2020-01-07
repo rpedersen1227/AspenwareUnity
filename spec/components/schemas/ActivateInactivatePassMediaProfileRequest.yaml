@@ -1,0 +1,10 @@
+type: object
+properties:
+  ipCode:
+    type: integer
+    format: int32
+  passMediaCode:
+    type: string
+  passMediaStatusCode:
+    type: integer
+    format: int32

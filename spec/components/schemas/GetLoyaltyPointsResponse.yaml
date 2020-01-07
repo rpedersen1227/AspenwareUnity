@@ -1,0 +1,16 @@
+type: object
+properties:
+  loyaltyId:
+    $ref: '#/components/schemas/Identifier'
+  loyaltyPoints:
+    type: integer
+    format: int32
+  adjustmentPoints:
+    type: integer
+    format: int32
+  awardPoints:
+    type: integer
+    format: int32
+  pointsBalance:
+    type: integer
+    format: int32

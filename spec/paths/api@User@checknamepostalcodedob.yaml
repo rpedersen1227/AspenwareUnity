@@ -1,0 +1,28 @@
+post:
+  tags:
+    - User
+  operationId: CheckNamePostalCodeDOB
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/CheckNamePostalCodeDOB'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CheckResponse'
+    '401':
+      description: Unauthorized

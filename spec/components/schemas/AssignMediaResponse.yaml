@@ -1,0 +1,16 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  mediaIsActive:
+    type: boolean
+  responseCodeType:
+    type: string
+    enum:
+      - Success
+      - MediaAlreadyExistsOnAccountError
+      - MediaIsAlreadyAssignedToAnotherUserError
+      - MediaHasInvalidCodeError
+      - MediaIsInactive
+      - ContactMergeFailed
+      - IPMergeFailed

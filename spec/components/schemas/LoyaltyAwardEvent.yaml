@@ -1,0 +1,23 @@
+type: object
+properties:
+  statusDescription:
+    type: string
+  loyaltyAwardStatusDescription:
+    type: string
+  awardDate:
+    type: string
+    format: date-time
+  voucherID:
+    type: string
+  voucherDescription:
+    type: string
+  loyaltyAwardDescription:
+    type: string
+  loyaltyPoints:
+    type: number
+    format: double
+  redemptionDate:
+    type: string
+    format: date-time
+  comment:
+    type: string

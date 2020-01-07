@@ -1,0 +1,10 @@
+type: object
+properties:
+  productFamilyId:
+    $ref: '#/components/schemas/Identifier'
+  salesChannelId:
+    $ref: '#/components/schemas/Identifier'
+  locationId:
+    $ref: '#/components/schemas/Identifier'
+  dateTime:
+    type: string

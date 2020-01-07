@@ -1,0 +1,17 @@
+type: object
+properties:
+  resourceId:
+    $ref: '#/components/schemas/Identifier'
+  name:
+    type: string
+  number:
+    type: string
+  description:
+    type: string
+  location:
+    $ref: '#/components/schemas/Location'
+  locationId:
+    $ref: '#/components/schemas/Identifier'
+  points:
+    type: integer
+    format: int32

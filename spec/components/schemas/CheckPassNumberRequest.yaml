@@ -1,0 +1,6 @@
+type: object
+properties:
+  lastName:
+    type: string
+  passNumber:
+    type: string

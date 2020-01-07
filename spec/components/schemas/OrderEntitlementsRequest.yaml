@@ -1,0 +1,6 @@
+type: object
+properties:
+  orderId:
+    $ref: '#/components/schemas/Identifier'
+  filterCodes:
+    type: string

@@ -1,0 +1,15 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  displayName:
+    type: string
+  numberOfRides:
+    type: integer
+    format: int32
+  season:
+    type: integer
+    format: int32
+  ridesRank:
+    type: integer
+    format: int32

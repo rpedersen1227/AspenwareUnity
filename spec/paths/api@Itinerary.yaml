@@ -1,0 +1,29 @@
+post:
+  tags:
+    - Itinerary
+  summary: Create a new itinerary.
+  operationId: CreateItinerary
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/Itinerary'
+  responses:
+    '201':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Identifier'
+    '401':
+      description: Unauthorized

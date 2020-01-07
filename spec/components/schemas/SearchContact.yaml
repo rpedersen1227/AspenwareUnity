@@ -1,0 +1,52 @@
+type: object
+properties:
+  active:
+    type: boolean
+  id:
+    type: string
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  customerId:
+    $ref: '#/components/schemas/Identifier'
+  isCustomerPrimary:
+    type: boolean
+  status:
+    type: string
+  gender:
+    type: string
+  email:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  displayName:
+    type: string
+  company:
+    type: string
+  streetAddress:
+    type: string
+  streetAddress2:
+    type: string
+  zipPostalCode:
+    type: string
+  city:
+    type: string
+  countryId:
+    type: string
+  stateProvince:
+    type: string
+  stateProvinceId:
+    type: string
+  cityState:
+    type: string
+  phone:
+    type: string
+  fax:
+    type: string
+  dateOfBirth:
+    type: string
+  photo:
+    type: string
+  photoUrl:
+    type: string

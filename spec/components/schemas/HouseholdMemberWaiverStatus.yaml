@@ -1,0 +1,8 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  isPrimary:
+    type: boolean
+  hasWaiver:
+    type: boolean

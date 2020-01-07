@@ -1,0 +1,19 @@
+type: object
+properties:
+  entitlementStatus:
+    type: string
+    enum:
+      - Unknown
+      - Active
+      - Returned
+      - Expired
+      - NoWaiver
+      - Hotlist
+  comment:
+    type: string
+  effectiveDate:
+    type: string
+    format: date-time
+  expirationDate:
+    type: string
+    format: date-time

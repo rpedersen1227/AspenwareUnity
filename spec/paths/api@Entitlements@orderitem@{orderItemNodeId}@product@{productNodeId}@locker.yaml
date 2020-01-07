@@ -1,0 +1,41 @@
+get:
+  tags:
+    - Entitlements
+  summary: Get locker rental info
+  operationId: GetEntitlementLockerRentalInfo
+  parameters:
+    - name: orderItemNodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: productNodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            uniqueItems: false
+            type: array
+            items:
+              $ref: '#/components/schemas/UnityPrompt'
+    '401':
+      description: Unauthorized

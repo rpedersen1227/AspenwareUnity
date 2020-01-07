@@ -1,0 +1,9 @@
+type: object
+properties:
+  productFamily:
+    $ref: '#/components/schemas/ProductFamily'
+  products:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Product'

@@ -1,0 +1,23 @@
+type: object
+properties:
+  firstName:
+    type: string
+  lastName:
+    type: string
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  accessLine1:
+    type: string
+  accessLine2:
+    type: string
+  accessLine3:
+    type: string
+  entitlements:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Entitlement'
+  success:
+    type: boolean
+  message:
+    type: string

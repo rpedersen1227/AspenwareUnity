@@ -1,0 +1,31 @@
+get:
+  tags:
+    - Access
+  summary: Gets the user's current tram rank.
+  operationId: CurrentTramRank
+  parameters:
+    - name: nodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/CurrentTramRankResponse'
+    '401':
+      description: Unauthorized

@@ -1,0 +1,62 @@
+put:
+  tags:
+    - Customers
+  summary: Creates or Updates a Customer's resort charge waiver
+  operationId: UpdateResortChargeWaiver
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Customer Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: A UpdateResortChargeWaiverRequest object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/UpdateResortChargeWaiverRequest'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+delete:
+  tags:
+    - Customers
+  summary: Delete's a Customer's resort charge waiver
+  operationId: RemoveResortChargeWaiver
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Customer Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized

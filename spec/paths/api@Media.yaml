@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Media
+  operationId: TestErrorLogging
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CheckContactExistsResponse'
+    '401':
+      description: Unauthorized
+put:
+  tags:
+    - Media
+  summary: Creates or Updates Media
+  operationId: UpdateMedia
+  parameters:
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: An UpdateMediaRequest object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/UpdateMediaRequest'
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
