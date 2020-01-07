@@ -1,0 +1,38 @@
+get:
+  tags:
+    - Contacts
+  summary: Gets Waivers for a Household
+  operationId: CheckHouseholdWaivers
+  parameters:
+    - name: nodeId
+      in: path
+      description: A Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/CheckHouseholdWaiverResponse'
+    '401':
+      description: Unauthorized
+    '404':
+      description: Not Found
+  security:
+    - oauth2:
+        - services
+        - contact

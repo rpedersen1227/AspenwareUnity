@@ -1,0 +1,18 @@
+type: object
+properties:
+  creditCardId:
+    $ref: '#/components/schemas/Identifier'
+  isPrimary:
+    type: boolean
+  cardNumber:
+    type: string
+  cardName:
+    type: string
+  cardCvv2:
+    type: string
+  cardExpirationMonth:
+    type: string
+  cardExpirationYear:
+    type: string
+  cardType:
+    type: string

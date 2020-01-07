@@ -1,0 +1,14 @@
+type: object
+properties:
+  attributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/AttributeValue'
+  name:
+    type: string
+  quantityOnHand:
+    type: integer
+    format: int32
+  sku:
+    type: string

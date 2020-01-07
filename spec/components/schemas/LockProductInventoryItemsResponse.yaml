@@ -1,0 +1,7 @@
+type: object
+properties:
+  responseItems:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/LockProductInventoryItemResponse'

@@ -1,0 +1,15 @@
+type: object
+properties:
+  activityCode:
+    type: integer
+    format: int32
+  activityLocationCode:
+    type: integer
+    format: int32
+  startTimes:
+    type: object
+    additionalProperties:
+      uniqueItems: false
+      type: array
+      items:
+        $ref: '#/components/schemas/StartTime'

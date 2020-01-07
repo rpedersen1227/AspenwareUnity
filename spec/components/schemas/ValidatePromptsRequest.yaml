@@ -1,0 +1,12 @@
+type: object
+properties:
+  promptData:
+    type: string
+  promptCode:
+    type: integer
+    format: int32
+  productHeaderCode:
+    type: string
+  contactId:
+    type: integer
+    format: int32

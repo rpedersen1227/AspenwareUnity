@@ -1,0 +1,19 @@
+type: object
+properties:
+  entitlementId:
+    $ref: '#/components/schemas/Identifier'
+  accessProductTypeCode:
+    type: integer
+    format: int32
+  scanTypeDescription:
+    type: string
+  updateDate:
+    type: string
+    format: date-time
+  forceDays:
+    type: integer
+    format: int32
+  comments:
+    type: string
+  updatedBy:
+    $ref: '#/components/schemas/Identifier'

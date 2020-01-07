@@ -1,0 +1,10 @@
+type: object
+properties:
+  taxPaid:
+    type: number
+    format: double
+  taxRate:
+    type: number
+    format: double
+  overrideTaxRateFlag:
+    type: boolean

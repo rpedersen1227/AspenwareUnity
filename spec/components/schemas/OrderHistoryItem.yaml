@@ -1,0 +1,30 @@
+type: object
+properties:
+  ipcode:
+    type: integer
+    format: int32
+  firstName:
+    type: string
+  lastName:
+    type: string
+  orderId:
+    type: string
+  orderLine:
+    type: integer
+    format: int32
+  orderOrTransactionInd:
+    type: string
+  product:
+    type: string
+  productDate:
+    type: string
+    format: date-time
+  productDateGroup:
+    type: string
+    format: date-time
+  maxDays:
+    type: number
+    format: double
+  totalDays:
+    type: number
+    format: double

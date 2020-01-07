@@ -1,0 +1,8 @@
+type: object
+properties:
+  entitlementId:
+    $ref: '#/components/schemas/Identifier'
+  noteId:
+    $ref: '#/components/schemas/Identifier'
+  note:
+    type: string

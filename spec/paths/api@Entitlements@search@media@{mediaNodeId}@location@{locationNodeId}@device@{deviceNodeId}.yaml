@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Entitlements
+  operationId: RfidEntitlements
+  parameters:
+    - name: mediaNodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: locationNodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: deviceNodeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: ''
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  responses:
+    '200':
+      description: Success
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/MediaEntitlementResponse'
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - entitlement

@@ -1,0 +1,10 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  orderId:
+    $ref: '#/components/schemas/Identifier'
+  transactionId:
+    $ref: '#/components/schemas/Identifier'
+  entitlementId:
+    $ref: '#/components/schemas/Identifier'

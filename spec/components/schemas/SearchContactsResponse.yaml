@@ -1,0 +1,13 @@
+type: object
+properties:
+  contacts:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/SearchContact'
+  pageNumber:
+    type: integer
+    format: int32
+  pageSize:
+    type: integer
+    format: int32

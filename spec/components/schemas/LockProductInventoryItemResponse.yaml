@@ -1,0 +1,16 @@
+type: object
+properties:
+  inventoryItem:
+    $ref: '#/components/schemas/InventoryItem'
+  lockTag:
+    type: string
+  priceTag:
+    type: string
+  confirmationId:
+    type: string
+  message:
+    type: string
+  success:
+    type: boolean
+  priceList:
+    $ref: '#/components/schemas/PriceList'

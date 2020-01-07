@@ -1,0 +1,12 @@
+type: object
+properties:
+  maskedNumber:
+    type: string
+  creditCardType:
+    type: string
+    enum:
+      - Visa
+      - MasterCard
+      - AmericanExpress
+      - Discover
+      - Other

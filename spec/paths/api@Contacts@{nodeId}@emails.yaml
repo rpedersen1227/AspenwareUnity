@@ -1,0 +1,38 @@
+put:
+  tags:
+    - Contacts
+  summary: Updates a Contact's Email
+  operationId: UpdateEmail
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: The Contact's Email
+    content:
+      application/json:
+        schema:
+          type: string
+  responses:
+    '204':
+      description: Success
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - contact

@@ -1,0 +1,38 @@
+post:
+  tags:
+    - Contacts
+  summary: Adds Waiver for Contact
+  operationId: UpdateLiabilityReleaseSignature
+  parameters:
+    - name: nodeId
+      in: path
+      description: The Contact's Identifier
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    - name: unity-api-version
+      in: header
+      description: The requested API version
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+        default: '3.0'
+  requestBody:
+    description: SignLiabilityReleaseRequest object
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/SignLiabilityReleaseRequest'
+  responses:
+    '201':
+      description: Success
+    '401':
+      description: Unauthorized
+  security:
+    - oauth2:
+        - services
+        - contact

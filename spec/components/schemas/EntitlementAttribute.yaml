@@ -1,0 +1,26 @@
+type: object
+properties:
+  id:
+    type: string
+  legacyAttributeId:
+    type: string
+  value:
+    type: string
+  options:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/PurchasedItemAttributeOption'
+  entitlementAttributeId:
+    $ref: '#/components/schemas/Identifier'
+  entitlementAttributeTypeId:
+    $ref: '#/components/schemas/Identifier'
+  name:
+    type: string
+  description:
+    type: string
+  entitlementAttributeValues:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/EntitlementAttributeValue'

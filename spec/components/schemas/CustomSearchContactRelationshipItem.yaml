@@ -1,0 +1,24 @@
+type: object
+properties:
+  contactId:
+    $ref: '#/components/schemas/Identifier'
+  firstName:
+    type: string
+  lastName:
+    type: string
+  birthDate:
+    type: string
+    format: date-time
+  age:
+    type: integer
+    format: int32
+  relationshipTypeCode:
+    type: integer
+    format: int32
+  relationshipType:
+    type: string
+  roleCode:
+    type: integer
+    format: int32
+  role:
+    type: string

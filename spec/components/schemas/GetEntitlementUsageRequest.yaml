@@ -1,0 +1,15 @@
+type: object
+properties:
+  entitlementTypeIds:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/Identifier'
+  startDate:
+    type: string
+    format: date-time
+  endDate:
+    type: string
+    format: date-time
+  contactId:
+    $ref: '#/components/schemas/Identifier'

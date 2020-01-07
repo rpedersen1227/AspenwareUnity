@@ -1,0 +1,12 @@
+type: object
+properties:
+  newEmail:
+    type: string
+  newUsername:
+    type: string
+  newPassword:
+    type: string
+  allowUsernameChange:
+    type: boolean
+  customerId:
+    $ref: '#/components/schemas/Identifier'

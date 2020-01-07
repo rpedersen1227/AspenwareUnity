@@ -1,0 +1,41 @@
+type: object
+properties:
+  ageRefs:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/RentalProfileRefItem'
+  abilityRefs:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/RentalProfileRefItem'
+  heightRefs:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/RentalProfileRefItem'
+  weightRefs:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/RentalProfileRefItem'
+  shoeSizeRefs:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/components/schemas/RentalProfileRefItem'
+  shoeSize:
+    type: string
+  selectedAge:
+    type: string
+  selectedAbility:
+    type: string
+  selectedHeight:
+    type: string
+  selectedWeight:
+    type: string
+  selectedShoeSize:
+    type: string
+  selectedGoofy:
+    type: string

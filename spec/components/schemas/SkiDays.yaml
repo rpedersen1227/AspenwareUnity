@@ -1,0 +1,11 @@
+type: object
+properties:
+  skiDate:
+    type: string
+    format: date-time
+  firstScanTime:
+    type: string
+  location:
+    type: string
+  season:
+    type: string

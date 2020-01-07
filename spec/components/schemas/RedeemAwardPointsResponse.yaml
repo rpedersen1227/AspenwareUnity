@@ -1,0 +1,7 @@
+type: object
+properties:
+  loyaltyAwardCode:
+    type: integer
+    format: int32
+  voucherId:
+    type: string
