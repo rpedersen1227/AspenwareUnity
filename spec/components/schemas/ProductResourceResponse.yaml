@@ -1,7 +1,0 @@
-type: object
-properties:
-  resourceItems:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/ResourceItem'

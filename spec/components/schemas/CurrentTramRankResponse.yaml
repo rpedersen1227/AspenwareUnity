@@ -1,4 +1,0 @@
-type: object
-properties:
-  ridesRank:
-    $ref: '#/components/schemas/AccessRidesRank'

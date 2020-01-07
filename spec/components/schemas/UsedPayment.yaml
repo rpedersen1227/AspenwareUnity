@@ -1,9 +1,0 @@
-type: object
-properties:
-  amount:
-    type: number
-    format: double
-  number:
-    type: string
-  paymentType:
-    type: string

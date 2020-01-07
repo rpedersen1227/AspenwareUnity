@@ -1,7 +1,7 @@
 specFileName: 'c://unityv4/openapi.yaml'
 apiTitle: Unity
-splitSpec: true
-codeSamples: true
+splitSpec: false
+codeSamples: false
 swaggerUI: true
 travis: false
 oasVersion: 3.0.0

@@ -1,4 +1,0 @@
-type: object
-properties:
-  username:
-    type: string

@@ -1,7 +1,0 @@
-type: object
-properties:
-  lockId:
-    type: integer
-    format: int32
-  store:
-    type: string

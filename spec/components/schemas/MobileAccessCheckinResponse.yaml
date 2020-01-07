@@ -1,8 +1,0 @@
-type: object
-properties:
-  userName:
-    type: string
-  status:
-    type: string
-  message:
-    type: string

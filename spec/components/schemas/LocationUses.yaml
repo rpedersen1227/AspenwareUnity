@@ -1,7 +1,0 @@
-type: object
-properties:
-  uses:
-    type: integer
-    format: int32
-  location:
-    type: string
