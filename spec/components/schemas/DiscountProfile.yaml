@@ -1,9 +1,0 @@
-type: object
-properties:
-  accessRules:
-    uniqueItems: false
-    type: array
-    items:
-      type: string
-  description:
-    type: string

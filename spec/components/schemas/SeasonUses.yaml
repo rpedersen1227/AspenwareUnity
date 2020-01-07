@@ -1,9 +1,0 @@
-type: object
-properties:
-  uses:
-    type: integer
-    format: int32
-  season:
-    type: string
-  currentSeason:
-    type: boolean

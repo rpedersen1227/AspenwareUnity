@@ -1,9 +1,0 @@
-type: object
-properties:
-  productAttributes:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/ProductAttribute'
-  productAttributeType:
-    $ref: '#/components/schemas/ProductAttributeType'

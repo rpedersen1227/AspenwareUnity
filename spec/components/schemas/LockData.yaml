@@ -1,4 +1,0 @@
-type: object
-properties:
-  activityInstances:
-    $ref: '#/components/schemas/ActivityInstances'

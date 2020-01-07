@@ -1,7 +1,0 @@
-type: object
-properties:
-  products:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/ProductVariant'

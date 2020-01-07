@@ -1,4 +1,0 @@
-type: object
-properties:
-  lob:
-    $ref: '#/components/schemas/LineOfBusiness'
