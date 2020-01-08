@@ -1,0 +1,7 @@
+specFileName: 'c:\\unityv4\openapi-valid.yaml'
+apiTitle: Unity
+splitSpec: false
+codeSamples: false
+swaggerUI: true
+travis: false
+oasVersion: 3.0.0
