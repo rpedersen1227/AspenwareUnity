@@ -1,9 +1,0 @@
-type: object
-properties:
-  checkProductInventoryRequests:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/CheckProductInventoryRequest'
-  store:
-    type: string

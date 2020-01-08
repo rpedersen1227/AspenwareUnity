@@ -1,7 +1,0 @@
-type: object
-properties:
-  productFamilies:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/ProductFamily'

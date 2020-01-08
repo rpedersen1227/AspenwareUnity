@@ -1,8 +1,0 @@
-type: object
-properties:
-  contactId:
-    $ref: '#/components/schemas/Identifier'
-  creditCard:
-    $ref: '#/components/schemas/ResortChargeCreditCard'
-  release:
-    $ref: '#/components/schemas/ResortChargeReleaseOfLiability'

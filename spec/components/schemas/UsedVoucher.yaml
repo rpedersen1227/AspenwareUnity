@@ -1,7 +1,0 @@
-type: object
-properties:
-  usedValue:
-    type: number
-    format: double
-  voucher:
-    $ref: '#/components/schemas/Voucher'

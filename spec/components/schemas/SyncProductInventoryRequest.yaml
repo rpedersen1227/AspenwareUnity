@@ -1,7 +1,0 @@
-type: object
-properties:
-  startDate:
-    type: string
-    format: date-time
-  refreshSubscriptions:
-    type: boolean

@@ -1,7 +1,0 @@
-type: object
-properties:
-  confirmations:
-    uniqueItems: false
-    type: array
-    items:
-      $ref: '#/components/schemas/EntitlementConfirmation'

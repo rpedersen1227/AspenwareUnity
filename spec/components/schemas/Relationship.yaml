@@ -1,6 +1,0 @@
-type: object
-properties:
-  relationshipType:
-    type: string
-  relationshipGroupId:
-    $ref: '#/components/schemas/Identifier'

@@ -1,6 +1,0 @@
-type: object
-properties:
-  lineOfBusinessId:
-    $ref: '#/components/schemas/Identifier'
-  includeProducts:
-    type: boolean

@@ -1,6 +1,6 @@
-specFileName: 'c://unityv4/openapi-valid.yaml'
+specFileName: 'c:\\unityv4\openapi-valid.yaml'
 apiTitle: Unity
-splitSpec: true
+splitSpec: false
 codeSamples: false
 swaggerUI: true
 travis: false

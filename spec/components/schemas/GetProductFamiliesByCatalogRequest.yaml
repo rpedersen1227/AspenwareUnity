@@ -1,6 +1,0 @@
-type: object
-properties:
-  salesChannelId:
-    $ref: '#/components/schemas/Identifier'
-  includeProducts:
-    type: boolean

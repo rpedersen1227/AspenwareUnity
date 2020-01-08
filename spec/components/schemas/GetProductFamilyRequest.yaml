@@ -1,8 +1,0 @@
-type: object
-properties:
-  productFamilyId:
-    $ref: '#/components/schemas/Identifier'
-  includeProducts:
-    type: boolean
-  clientCode:
-    type: string

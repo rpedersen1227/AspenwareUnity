@@ -1,9 +1,0 @@
-type: object
-properties:
-  contactId:
-    $ref: '#/components/schemas/Identifier'
-  inventoryItem:
-    $ref: '#/components/schemas/InventoryItem'
-  quantity:
-    type: integer
-    format: int32
