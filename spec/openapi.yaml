@@ -1,12 +1,31 @@
 openapi: 3.0.0
 info:
   title: Unity API 4.0
-  description: The Unity eCommerce API.<br/><br/>Use the <strong>'Authorize'</strong>
-    button to gain access to any API methods that require authorization.<br/><br/>
-    <font size="6">hello world</font>
+  x-logo:
+    url: "https://aspenware.com/wp-content/themes/aspenware/dist/images/logo_aspenware.png"
+  description: |
+    # Overview 
+    The Unity Standard API is a RESTful API
+
+    # Authentication
+    Authentication for the Unity API is based on the
+    [OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749). Unity currently supports grant
+    types of **client_credentials** and **refresh_token**.
+    See [POST /oauth/token](#operation/createToken) for details on the request and response formats.
+    <!-- ReDoc-Inject: <security-definitions> -->
+
+    ## Building Integrations
+    We will provide customers with unique client credentials for each application/integration they build, allowing us
+    to enforce appropriate access controls and monitor API usage.
+    The client credentials will be scoped to the organization, and allow full access to all patients and related data
+    within that organization.
+
+	
   version: "4.0"
+
 servers:
 - url: /
+
 paths:
   /api/Access/access-history-by-location/{nodeId}:
     get:
