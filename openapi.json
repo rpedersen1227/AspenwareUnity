@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Unity API 4.0",
-    "description": "The Unity eCommerce API.<br/><br/>Use the <strong>'Authorize'</strong> button to gain access to any API methods that require authorization.<br/><br/>",
+    "description": "The Unity eCommerce API.<br/><br/>Use the <strong>'Authorize'</strong> button to gain access to any API methods that require authorization.<br/><br/> <font size=\"6\">hello world</font>",
     "version": "4.0"
   },
   "servers": [
